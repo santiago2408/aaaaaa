@@ -7,19 +7,20 @@ package ProductosConcretos;
 
 // se despliega un mensaje dependiendo del tipo de nota del primer periodo que se quiera conocer
 import Fabrica_abstracta.*;
+import javax.swing.JOptionPane;
 public class PrimerPerido implements ServicioNotas{
     
     @Override
     public void NotaQuiz(){
-       System.out.println("La nota del quiz primer periodo Es valida");
+        JOptionPane.showMessageDialog(null,"La nota del quiz primer periodo Es valida");
     }
     @Override
     public void NotaTrabajo(){
-        System.out.println("La nota del trabajo primer period  Es valida");
+        JOptionPane.showMessageDialog(null,"La nota del trabajo primer periodo Es valida");
     }
     
     @Override
     public void NotaParcial(){
-        System.out.println("La nota del parcial primer periodo Es valida");
+        JOptionPane.showMessageDialog(null,"La nota del parcial primer periodo Es valida");
     }
 }

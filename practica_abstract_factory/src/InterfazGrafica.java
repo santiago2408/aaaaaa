@@ -81,13 +81,4 @@ public class InterfazGrafica extends JFrame {
             notas.NotaTrabajo();
         }
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new InterfazGrafica().setVisible(true);
-            }
-        });
-    }
 }

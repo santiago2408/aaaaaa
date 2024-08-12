@@ -9,7 +9,9 @@ import FabricaConcreta.TercerConcreto;
 import FabricaConcreta.primerConcreto;
 import Fabrica_abstracta.ServicioFactory;
 import Fabrica_abstracta.ServicioNotas;
+import interfaz.InterfazGrafica;
 import java.util.Scanner;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -18,30 +20,14 @@ import java.util.Scanner;
 public class practica_abstract_factory {
      private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-       int op;
-        do{
-            op=menu();//pegunta por el periodo elegido
-            switch(op){
-                case 1:
-                    Periodo(new primerConcreto());//llamado al metodo periodo
-                    break; //se le pasa una factoria concreta
-                case 2:
-                    Periodo(new SegundoConcreto());
-                    break;
-                case 3:
-                    Periodo(new TercerConcreto());
-                    break;
-                case 4:
-                    System.out.println("Cerrando Programa");
-                    System.exit(0);
-                 default :
-                    System.out.println(".....Opcion invalida....");
-            }//cierra switchn\n
-            //System.out.println("\n\n");
-        }while(op!=4);
+        
+        InterfazGrafica vista = new InterfazGrafica();
+        vista.setVisible(true);
+        
+
      
        
-       
+
      }
     
     public static void Periodo(ServicioFactory Notas){
@@ -52,16 +38,7 @@ public class practica_abstract_factory {
         
     }//fin metodov Periodo
     
-    public static int  menu(){
-        System.out.println(
-                "MENU DE OPCIONES\n"
-                + "1.   Solicitar Notas Primer Perido. \n"
-                + "2.   Solicitar Notas Segundo Perido. \n"
-                + "3.   Solicitar Notas tercer periodo. \n"
-                + "4.   Cerrar programa. \n\n"
-                + "Seleccion opcion..."
-        );
-        return Integer.parseInt(sc.nextLine());
-    }
+
+    
 }//cierra menu
 
